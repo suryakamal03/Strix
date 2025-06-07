@@ -1,0 +1,187 @@
+:root {
+  --primary: #1a365d;        /* Deep Navy */
+  --charcoal: #2d3748;       /* Alternate Dark */
+  --secondary: #3182ce;      /* CTA Buttons */
+  --accent: #ed8936;         /* Promotions */
+  --bg: #ffffff;             /* White Background */
+  --light-gray: #f7fafc;     /* Section Backgrounds */
+}
+* {
+  margin: 2px;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--bg);
+  margin-top: 0%;
+  padding: 0%;
+}
+.header{
+  background-color: #f7fafc;
+  width: 100% ;
+  height: 70px;
+  margin-top: 0%;
+  display: flex;
+  align-items: center;
+}
+/* logo */
+.name h1{
+  font-family: 'Anton', sans-serif;
+}
+/* signup button */
+.signuplogin{
+  position: absolute;
+  right: 2px;
+}
+.signup {
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.signup .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.signup .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.signup:hover {
+  background-color: var(--hover-color);
+}
+
+.signup:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.signup:hover .arrow::before {
+  right: 0;
+}
+/* header menu or nav bar between logo and sign up */
+ .tab {
+  padding: 1.3em 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.tab:hover {
+  background-color: #2d3748;
+  box-shadow: 0px 15px 20px #3182ce;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.tab:active {
+  transform: translateY(-1px);
+}
+.tabs{
+  position: absolute;
+  left: 20%;
+}
+/* cards and card */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.card{
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+.card img {
+  height: 200px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.card p {
+  font-weight: bold;
+  color: #3182ce;
+}
+
+.card button {
+  margin-top: 0.8rem;
+  padding: 0.5em 1em;
+  background-color: #ed8936;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* advertising */
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  width: 100% ;
+  height: 650px;
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider .slide.active {
+  opacity: 1;
+  z-index: 2;
+}
